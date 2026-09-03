@@ -1,0 +1,11 @@
+{
+  "NAV": {
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "TITLE": "Turning ideas into software people love to use."
+  }
+}

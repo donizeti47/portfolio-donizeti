@@ -1,0 +1,11 @@
+{
+  "NAV": {
+    "ABOUT": "Sobre mí",
+    "SKILLS": "Habilidades",
+    "PROJECTS": "Proyectos",
+    "CONTACT": "Contacto"
+  },
+  "HERO": {
+    "TITLE": "Transformando ideas en software que a la gente le encanta usar."
+  }
+}
