@@ -1,0 +1,51 @@
+<header class="header">
+  <div class="header-container">
+    <a href="#" class="logo">
+      <span>Donizeti Souza</span>
+    </a>
+
+    <button 
+      class="hamburger-btn" 
+      [class.active]="isMenuOpen" 
+      (click)="toggleMenu()"
+      aria-label="Alternar menu de navegação">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav class="nav-menu" [class.open]="isMenuOpen">
+      <ul class="nav-list">
+        @for (link of navLinks; track link.target) {
+          <li class="nav-item">
+            <a [href]="link.target" (click)="scrollToSection($event, link.target)" class="nav-link">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+
+      <div class="controls">
+        <select 
+          class="lang-select" 
+          [value]="currentLang" 
+          (change)="changeLanguage($any($event.target).value)">
+          <option value="pt-BR">PT</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+
+        <button 
+          class="theme-toggle-btn" 
+          (click)="toggleTheme()" 
+          [attr.aria-label]="'Mudar para tema ' + (currentTheme === 'light' ? 'escuro' : 'claro')">
+          @if (currentTheme === 'light') {
+            <span>🌙</span>
+          } @else {
+            <span>☀️</span>
+          }
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
