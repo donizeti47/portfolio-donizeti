@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F4F5F7;
+  --text-primary: #172B4D;
+  --text-secondary: #5E6C84;
+  --accent-color: #0052CC;
+  --accent-orange: #FF5630;
+  --border-color: #DFE1E6;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #091E42;
+  --bg-secondary: #172B4D;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3D4FF;
+  --accent-color: #4C9AFF;
+  --accent-orange: #FF7452;
+  --border-color: #253858;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
