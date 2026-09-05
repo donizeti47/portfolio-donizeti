@@ -4,17 +4,7 @@
       <span>Donizeti Souza</span>
     </a>
 
-    <button 
-      class="hamburger-btn" 
-      [class.active]="isMenuOpen" 
-      (click)="toggleMenu()"
-      aria-label="Alternar menu de navegação">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <nav class="nav-menu" [class.open]="isMenuOpen">
+    <nav class="nav-menu">
       <ul class="nav-list">
         @for (link of navLinks; track link.target) {
           <li class="nav-item">
