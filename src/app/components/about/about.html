@@ -1,0 +1,49 @@
+<section id="about-me" class="about-section">
+  <div class="about-container">
+    <div class="about-grid">
+      <div class="image-wrapper">
+        <img 
+          [ngSrc]="profileImagePath" 
+          alt="Ilustração do desenvolvedor" 
+          width="380" 
+          height="380" 
+          priority
+          class="profile-img" />
+      </div>
+
+      <div class="content-wrapper">
+        <span class="section-tag">SOBRE</span>
+
+        <h2 class="title">
+          Construindo soluções digitais com código limpo e curiosidade.
+        </h2>
+
+        <div class="bio-paragraphs">
+          <p>
+            Sou um Desenvolvedor Full Stack apaixonado por transformar ideias em experiências digitais confiáveis e fáceis de usar.
+          </p>
+          <p>
+            Ao longo da minha carreira, atuei em todo o ciclo de desenvolvimento de software, desde a criação de interfaces intuitivas com Angular e TypeScript até o projeto de APIs escaláveis com Node.js, Java e C#.
+          </p>
+          <p>
+            Acredito que um ótimo software nasce do equilíbrio entre código limpo, arquitetura bem pensada e uma profunda compreensão das pessoas que o utilizam. Meu foco não é apenas entregar funcionalidades, mas criar soluções sustentáveis e eficientes.
+          </p>
+          <p>
+            Gosto de resolver problemas complexos, explorar novas tecnologias e colaborar com equipes para construirmos produtos cada vez melhores juntos.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="metrics-grid">
+          @for (metric of metrics; track metric.title) {
+            <div class="metric-card">
+              <span class="metric-title">{{ metric.title }}</span>
+              <span class="metric-subtitle">{{ metric.subtitle }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
