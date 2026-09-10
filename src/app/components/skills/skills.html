@@ -1,0 +1,56 @@
+<section id="skills" class="skills-section">
+  <div class="skills-container">
+    
+    <div class="skills-header">
+      <h2 class="skills-title">Technical Stack</h2>
+      <p class="skills-subtitle">Ferramentas e ambientes que utilizo no dia a dia para construir arquiteturas resilientes.</p>
+    </div>
+
+    <div class="categories-grid">
+      
+      <div class="category-column">
+        <div class="category-title-wrapper">
+          <svg class="category-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <h3 class="category-heading">DESENVOLVIMENTO FRONTEND</h3>
+        </div>
+        <hr class="category-divider">
+
+        <div class="cards-grid">
+          @for (skill of frontendSkills; track skill) {
+            <div class="skill-card">
+              <span class="skill-dot"></span>
+              <span class="skill-name">{{ skill }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="category-column">
+        <div class="category-title-wrapper">
+          <svg class="category-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12C21 13.66 16.97 15 12 15C7.03 15 3 13.66 3 12"></path>
+            <path d="M3 5V19C3 20.66 7.03 22 12 22C16.97 22 21 20.66 21 19V5"></path>
+          </svg>
+          <h3 class="category-heading">INFRAESTRUTURA BACKEND</h3>
+        </div>
+        <hr class="category-divider">
+
+        <div class="cards-grid">
+          @for (skill of backendSkills; track skill) {
+            <div class="skill-card">
+              <span class="skill-dot"></span>
+              <span class="skill-name">{{ skill }}</span>
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

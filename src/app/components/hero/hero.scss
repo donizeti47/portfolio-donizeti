@@ -48,7 +48,7 @@
     font-family: Georgia, 'Times New Roman', serif;
 
     .highlight {
-      color: var(--accent-color);
+      color: var(--accent-blue);
       text-decoration: underline;
       text-underline-offset: 6px;
       text-decoration-thickness: 2px;
@@ -78,7 +78,7 @@
       transition: all 0.2s ease;
 
       &.btn-primary {
-        background-color: var(--accent-color);
+        background-color: var(--accent-blue);
         color: #ffffff;
         border: none;
 
