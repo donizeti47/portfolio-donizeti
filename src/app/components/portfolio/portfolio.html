@@ -1,0 +1,91 @@
+<section id="projects" class="projects-section">
+  <div class="projects-container">
+    
+    <div class="projects-header-wrapper">
+      <div class="projects-titles">
+        <span class="portfolio-eyebrow">PORTFOLIO</span>
+        <h2 class="section-title">Projetos em Destaque</h2>
+      </div>
+      <a href="#projects" class="view-all-link">
+        VER TODOS OS PROJETOS 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.title) {
+        <div class="project-card">
+          <div class="project-image-wrapper">
+            <img 
+              [src]="project.image" 
+              [alt]="project.title" 
+              class="project-image"
+              (error)="onImageError($event, project.fallbackImage)"
+            >
+          </div>
+          
+          <div class="project-content">
+            <div class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <span class="project-tag">{{ tag }}</span>
+              }
+            </div>
+
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+
+            <div class="project-links">
+              <a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="explore-system-btn">
+                EXPLORE SYSTEM &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    
+    <div class="section-header">
+      <h2 class="section-title-contact">Let's Connect.</h2>
+      <p class="section-subtitle-contact">
+        Seja uma oportunidade de trabalho, um projeto em mente ou apenas uma conversa sobre tecnologia. Gostaria muito de ouvir você.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      @for (contact of contacts; track contact.displayUrl) {
+        <a [href]="contact.url" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon-wrapper">
+            @if (contact.icon === 'envelope') {
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            } @else if (contact.icon === 'link') {
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            } @else {
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            }
+          </div>
+          <span class="contact-card-text">{{ contact.displayUrl }}</span>
+        </a>
+      }
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-content">
+      <p class="footer-copyright">&copy; {{ currentYear }} — Feito com &hearts; e muito café.</p>
+      <div class="footer-links">
+        <a href="#contact" class="footer-link">EMAIL</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LINKEDIN</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">GITHUB</a>
+      </div>
+    </div>
+  </div>
+</footer>

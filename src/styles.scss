@@ -1,6 +1,6 @@
 :root {
   --bg-primary: #FFFFFF;
-  --bg-secondary: #C3CBD3;
+  --bg-secondary: #9ca2a9;
   --bg-card: #FFFFFF;
   --bg-card-hover: #F0F4F8;
   
@@ -47,7 +47,8 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-body);
+  font-family: var(--Noto-Serif);
+  font-family: var(--Arial);
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
 }
