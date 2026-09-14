@@ -1,0 +1,125 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  padding: 4rem 2rem;
+  transition: background-color 0.3s ease;
+
+  .hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 780px;
+    text-align: left;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-orange, #FF5630);
+    }
+
+    .badge-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-orange, #FF5630);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin: 0 0 1.5rem 0;
+    font-family: Georgia, 'Times New Roman', serif;
+
+    .highlight {
+      color: var(--accent-color);
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 2.5rem 0;
+    max-width: 680px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .btn {
+      padding: 0.9rem 1.8rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &.btn-primary {
+        background-color: var(--accent-color);
+        color: #ffffff;
+        border: none;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+      &.btn-outline {
+        background-color: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--border-color);
+
+        &:hover {
+          border-color: var(--text-primary);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1.25rem;
+
+    .title {
+      font-size: 2.2rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: stretch;
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
